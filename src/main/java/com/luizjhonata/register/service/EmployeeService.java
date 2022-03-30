@@ -20,7 +20,9 @@ public class EmployeeService {
         return repository.findAll();
     }
 
-    public EmployeeModel findById(String id){
-        return repository.findById(id).get();
+    public List<EmployeeModel> findByName(String name){
+        List<EmployeeModel> employee = repository.findByName(name);
+        return employee;
+
     }
 }

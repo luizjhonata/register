@@ -30,8 +30,9 @@ public class EmployeeController {
         return ResponseEntity.ok(list);
     }
 
-    public ResponseEntity<EmployeeModel> findById(@PathVariable String id){
-        EmployeeModel employee = service.findById(id);
+    @GetMapping("/employee/{name}")
+    public ResponseEntity<List<EmployeeModel>> findByName(@PathVariable String name){
+        List<EmployeeModel> employee = service.findByName(name);
         return ResponseEntity.ok(employee);
 
     }
