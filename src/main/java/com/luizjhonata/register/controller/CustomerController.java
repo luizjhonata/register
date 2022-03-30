@@ -29,7 +29,7 @@ public class CustomerController {
         return ResponseEntity.ok(list);
     }
 
-    @GetMapping(value = "/customer/id/{ìd}")
+    @GetMapping(value = "/customer/{id}")
     public ResponseEntity<CustomerModel> findById(@PathVariable Long id){
         CustomerModel customer = service.findById(id);
         return ResponseEntity.ok(customer);
